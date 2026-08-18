@@ -1,0 +1,28 @@
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Data files (uncomment if you DON'T want to upload raw data)
+# *.txt
+# data/raw/
+
+# Model outputs
+*.pkl
+*.pt
+*.pth
