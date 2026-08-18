@@ -2,10 +2,6 @@
 
 Predicting **Integrated Primary Production (IPP)** — the daily rate at which ocean phytoplankton convert sunlight and CO₂ into organic carbon — from oceanographic measurements, using machine learning and deep learning.
 
-<p align="center">
-  <img src="plots/ipp_geographic_distribution.png" width="80%" alt="Sampling locations colored by IPP">
-</p>
-
 ---
 
 ## 📖 Overview
@@ -77,10 +73,6 @@ The model uses **six features** derived from the raw data to predict IPP:
 - **Chlavg** showed the strongest correlation with IPP (**r = 0.56**) — confirmed later as the most important feature.
 - **Temperature** showed almost no direct linear correlation (r = 0.02), an interesting finding given that classical ocean-productivity models (VGPM, CbPM) rely heavily on it.
 
-<p align="center">
-  <img src="plots/correlation_heatmap.png" width="60%" alt="Correlation heatmap">
-</p>
-
 ---
 
 ## 🤖 Modeling Approach
@@ -95,10 +87,6 @@ The model uses **six features** derived from the raw data to predict IPP:
 
 `log_Chlavg` dominated at **~44% importance**, aligning perfectly with the correlation analysis and with oceanographic theory — phytoplankton biomass is the primary driver of productivity.
 
-<p align="center">
-  <img src="plots/feature_importance.png" width="65%" alt="XGBoost feature importance">
-</p>
-
 ---
 
 ## 🧠 Key Takeaways
@@ -106,25 +94,6 @@ The model uses **six features** derived from the raw data to predict IPP:
 - **Gradient boosting beats deep learning on small tabular data.** With only ~1,244 stations, the neural networks couldn't outperform a well-tuned XGBoost — a textbook result for structured data.
 - **Chlorophyll is king.** Euphotic-zone chlorophyll was consistently the most predictive feature across every model and every analysis.
 - **Temperature's weak direct signal is notable.** Classical models embed temperature through an intermediate photosynthesis-rate term (Pb_opt); here, that information appears to be captured indirectly through chlorophyll and day length.
-
----
-
-## 📁 Repository Structure
-
-```
-ocean-ipp-prediction/
-├── README.md
-├── requirements.txt
-├── notebooks/
-│   └── ipp_prediction.ipynb      # Full end-to-end analysis
-├── src/
-│   ├── data_loader.py            # Multi-file loading + cleaning
-│   ├── feature_engineering.py    # Zopt & Chlavg derivation
-│   └── models.py                 # ML + DL model definitions
-├── data/
-│   └── raw/                      # Behrenfeld-Falkowski datasets
-└── plots/                        # Generated figures
-```
 
 ---
 
@@ -166,7 +135,7 @@ jupyter notebook notebooks/ipp_prediction.ipynb
 
 **Shivansh Gupta**
 M.S. Data Science, University of Delaware
-[LinkedIn](https://linkedin.com) · [GitHub](https://github.com)
+[LinkedIn](https://www.linkedin.com/in/shivansh-g-bbb857235/) · [GitHub](https://github.com/Shivansh-UD)
 
 ---
 
